@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "lib": ["DOM", "ES6", "ESNext"],
+    "jsx": "react-jsx",
+
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "baseUrl": "./src",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@pages/*": ["pages/*"],
+      "@widgets/*": ["widgets/*"],
+      "@features/*": ["features/*"],
+      "@entities/*": ["entities/*"],
+      "@shared/*": ["shared/*"],
+      "@assets/*": ["shared/assets/*"]
+    },
+
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

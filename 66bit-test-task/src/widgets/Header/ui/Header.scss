@@ -1,0 +1,60 @@
+.header {
+  width: 100%;
+  height: 90px;
+  max-width: 1920px;
+
+  box-shadow: 0px 4px 8px 0px var(--header-shadow);
+
+  background-color: var(--main-background);
+
+  @media (max-width: 320px) {
+    height: 54px;
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+
+    padding: 0 clamp(24px, 5vw + 24px, 180px);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__logo img {
+    max-height: 41px;
+
+    @media (max-width: 320px) {
+      max-height: 22px;
+    }
+  }
+
+  &__contacts {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+
+    & a {
+      font-family: "Raleway";
+      font-weight: 400;
+      font-size: 18px;
+      font-variant-numeric: lining-nums proportional-nums;
+      color: var(--main-text);
+
+      @media (max-width: 320px) {
+        display: none;
+      }
+    }
+  }
+}

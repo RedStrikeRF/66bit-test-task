@@ -1,0 +1,83 @@
+.theme-switcher {
+  position: relative;
+  width: 55px;
+  height: 26px;
+  background: var(--background-blue);
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  transition: background 0.5s ease-in-out;
+
+  &__slider {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--white);
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out, background 0.5s ease-in-out;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease-in-out;
+
+    & img {
+      max-height: 100%;
+    }
+  }
+
+  @media (max-width: 320px) {
+    width: 47px;
+    height: 22px;
+
+    &__slider {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
+
+/* Тёмная тема */
+[data-theme="dark"] {
+  .theme-switcher__slider {
+    transform: translateX(28px);
+  }
+
+  .theme-switcher__icon--light {
+    opacity: 0;
+  }
+
+  .theme-switcher__icon--dark {
+    opacity: 1;
+  }
+}
+
+/* Светлая тема */
+[data-theme="light"] {
+  .theme-switcher__slider {
+    transform: translateX(0);
+  }
+
+  .theme-switcher__icon--light {
+    opacity: 1;
+  }
+
+  .theme-switcher__icon--dark {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,13 @@
+:root {
+  --main-text: rgba(41, 41, 41, 1);
+  --add-text: rgba(176, 176, 176, 1);
+  --main-background: rgba(255, 255, 255, 1);
+  --action-background: rgba(242, 242, 242, 1);
+
+  --background-blue: rgba(21, 93, 164, 1);
+  --white: rgba(255, 255, 255, 1);
+}
+
+* {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
